@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Alta de alumnos</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container mt-4">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellido Paterno</th>
+					<th>Apellido Materno</th>
+					<th>Materia</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td th:text="${alumno.nombre}"></td>
+					<td th:text="${alumno.apPaterno}"></td>
+					<td th:text="${alumno.apMaterno}"></td>
+					<td>
+						<select name="OS">
+							<option value="1">Matematicas</option>
+							<option value="2">Español</option>
+							<option value="3">Quimica</option>
+						</select>
+					</td>
+					<td><a class="btn btn-warning">Resgitrar</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
